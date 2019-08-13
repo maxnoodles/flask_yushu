@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = {index = "http://mirrors.aliyun.com/pypi/simple/",version = "*"}
+requests = {index = "https://pypi.tuna.tsinghua.edu.cn/simple/",version = "*"}
+wtforms = "*"
+flask-sqlalchemy = "*"
+cymysql = "*"
+flask-login = "*"
+flask-mail = "*"
+
+[requires]
+python_version = "3.7"

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {{ super() }}
+
+    {% if data.age < 18 %}
+        {{ data.name }}
+    {% elif data.age == 18 %}
+        {{ data.summary | default('未名', True) }}
+        <br>
+        {% with messages = get_flashed_messages(category_filter=['error']) %}
+        {{ messages }}
+        {% endwith %}
+    {% else %}
+        {{ data.age }}
+    {% endif %}
+
+{#    {% for key, value in data.items() %}#}
+{#        {{ key, value }}#}
+{#    {% endfor %}#}
+
+{% endblock %}
